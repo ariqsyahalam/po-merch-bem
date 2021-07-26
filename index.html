@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Pemesanan Merch BEM Fasilkom UI</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/15958/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Form Data Submitted :)");
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <form id="myForm">
+      <!-- nama lengkap -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nama Lengkap</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nama-lengkap"
+          placeholder="Masukkan nama Lengkap"
+          name="nama_lengkap"
+        />
+      </div>
+      <!-- email ui -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email UI</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email-ui"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          name="email_ui"
+        />
+      </div>
+      <!-- ID Line -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">ID Line</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nama-lengkap"
+          aria-describedby="emailHelp"
+          placeholder="Enter email"
+          name="id_line"
+        />
+      </div>
+      <!-- Divisi -->
+      <div class="form-group">
+        <label for="exampleInputEmail1">Nama Lengkap</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option value="bismit">Bismit</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <!-- <label>nama_lengkap</label>
+      <input name="nama_lengkap" />
+      <br /> -->
+      <!-- <label>email_ui</label>
+      <input name="email_ui" />
+      <br />
+      <label>id_line</label>
+      <input name="id_line" />
+      <br />
+      <label>divisi</label>
+      <input name="divisi" />
+      <br /> -->
+      <label>warna_baju</label>
+      <input name="warna_baju" />
+      <br />
+      <label>ukuran_baju</label>
+      <input name="ukuran_baju" />
+      <br />
+      <label>nama_penerima</label>
+      <input name="nama_penerima" />
+      <br />
+      <label>nomor_hp_penerima</label>
+      <input name="nomor_hp_penerima" />
+      <br />
+      <label>alamat_lengkap</label>
+      <input name="alamat_lengkap" />
+      <br />
+      <label>kode_pos</label>
+      <input name="kode_pos" />
+      <br />
+      <label>link_transfer</label>
+      <input name="link_transfer" />
+      <br />
+      <label>total_biaya</label>
+      <input name="total_biaya" />
+      <br />
+    </form>
+    <button onclick="SubForm()">Submit</button>
+  </body>
+</html>
